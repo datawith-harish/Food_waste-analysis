@@ -14,7 +14,19 @@ conn = connect(
     database = os.getenv("DB_NAME")
 )
 
-df = pd.read_sql("SELECT * FROM food_waste", conn)
+curs = conn.cursor()
+
+def read():
+    sql = "SELECT * FROM food_waste"
+    curs.execute(sql)
+    values = curs.fetchall()                       # ellaa rows
+    columns = [col[0] for col in curs.description] # column names
+    return values, columns
+
+values, columns = read()
+df = pd.DataFrame.from_records(values, columns=columns, coerce_float=True)
+
+
 
 print(df.head())
 print(df.shape)
