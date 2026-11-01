@@ -65,3 +65,83 @@ day_summary["avg_kg_per_day"] = day_summary["total_wasted_kg"] / days_count
 
 print("\nDay wise summary:")
 print(day_summary.round(1))
+
+meal_summary = df.groupby("meal").agg(
+    total_prepared_kg=("quantity_prepared_kg", "sum"),
+    total_wasted_kg=("quantity_wasted_kg", "sum"),
+    avg_waste_pct=("waste_percentage", "mean")
+).reindex(meal_order)
+
+meal_summary["share_of_total_waste_pct"] = (
+    meal_summary["total_wasted_kg"] / meal_summary["total_wasted_kg"].sum() * 100
+)
+
+print("\nMeal wise summary:")
+print(meal_summary.round(1))
+pd.set_option("display.width", 250)
+pd.set_option("display.max_columns", 20)
+
+
+# ---- Item wise ----
+item_summary = df.groupby("menu_item").agg(
+    total_wasted_kg=("quantity_wasted_kg", "sum"),
+    avg_waste_pct=("waste_percentage", "mean"),
+    total_waste_cost_rs=("waste_cost_inr", "sum")
+)
+
+print("\nTop 10 items by waste (kg):")
+print(item_summary.sort_values("total_wasted_kg", ascending=False).head(10).round(1))
+
+print("\nTop 10 items by waste % (disliked items):")
+print(item_summary.sort_values("avg_waste_pct", ascending=False).head(10).round(1))
+
+print("\nTop 10 items by waste cost (Rs):")
+print(item_summary.sort_values("total_waste_cost_rs", ascending=False).head(10).round(0))
+
+
+# ---- Category wise ----
+cat_summary = df.groupby("category").agg(
+    total_prepared_kg=("quantity_prepared_kg", "sum"),
+    total_wasted_kg=("quantity_wasted_kg", "sum"),
+    avg_waste_pct=("waste_percentage", "mean"),
+    total_waste_cost_rs=("waste_cost_inr", "sum")
+).sort_values("total_wasted_kg", ascending=False)
+
+print("\nCategory wise summary:")
+print(cat_summary.round(1))
+
+
+
+# ---- Weekday vs Weekend ----
+daytype_summary = df.groupby("day_type").agg(
+    total_prepared_kg=("quantity_prepared_kg", "sum"),
+    total_wasted_kg=("quantity_wasted_kg", "sum"),
+    avg_waste_pct=("waste_percentage", "mean")
+)
+
+n_days = df.groupby("day_type")["date"].nunique()
+daytype_summary["avg_kg_per_day"] = daytype_summary["total_wasted_kg"] / n_days
+
+print("\nWeekday vs Weekend:")
+print(daytype_summary.round(1))
+
+
+# ---- Rainy day impact ----
+rain = df.groupby("rainy_day").agg(
+    total_wasted_kg=("quantity_wasted_kg", "sum"),
+    avg_waste_pct=("waste_percentage", "mean")
+)
+rain["days"] = df.groupby("rainy_day")["date"].nunique()
+rain["avg_kg_per_day"] = rain["total_wasted_kg"] / rain["days"]
+
+print("\nRainy vs normal days:")
+print(rain.round(1))
+
+# ---- Special event impact ----
+event = df.groupby("special_event").agg(
+    avg_waste_pct=("waste_percentage", "mean"),
+    days=("date", "nunique")
+).sort_values("avg_waste_pct", ascending=False)
+
+print("\nSpecial event impact:")
+print(event.round(1))
