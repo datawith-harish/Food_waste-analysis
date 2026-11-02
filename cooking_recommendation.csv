@@ -1,0 +1,77 @@
+day_of_week,meal,menu_item,kg_per_student,recommended_kg_per_student
+Friday,Breakfast,Coconut Chutney,0.046980291508254876,0.0493
+Friday,Breakfast,Dosa,0.14939559740173408,0.1569
+Friday,Breakfast,Sambar,0.1128179360575109,0.1185
+Friday,Dinner,Egg Curry,0.11732303580029604,0.1232
+Friday,Dinner,Parotta,0.19525143205814927,0.205
+Friday,Dinner,Veg Salna,0.12284180545757549,0.129
+Friday,Lunch,Fish Fry,0.10288682937713944,0.108
+Friday,Lunch,Kootu,0.09327190700750239,0.0979
+Friday,Lunch,Rasam,0.11843060674746056,0.1244
+Friday,Lunch,Rice,0.2935450869543405,0.3082
+Friday,Snacks,Banana Bajji,0.09782411794494485,0.1027
+Friday,Snacks,Tea & Biscuit,0.0692260858975955,0.0727
+Monday,Breakfast,Coconut Chutney,0.04539176345269773,0.0477
+Monday,Breakfast,Idli,0.1783050151229744,0.1872
+Monday,Breakfast,Sambar,0.11646807039280484,0.1223
+Monday,Dinner,Cabbage Poriyal,0.09491187780561136,0.0997
+Monday,Dinner,Chapati,0.15346323077379517,0.1611
+Monday,Dinner,Kurma,0.11764994132983751,0.1235
+Monday,Lunch,Appalam,0.019495337457562968,0.0205
+Monday,Lunch,Beans Poriyal,0.09373502486593857,0.0984
+Monday,Lunch,Rice,0.2842799060216054,0.2985
+Monday,Lunch,Sambar,0.11688015961123815,0.1227
+Monday,Snacks,Sundal,0.07672905040434949,0.0806
+Monday,Snacks,Tea & Biscuit,0.06717285473750409,0.0705
+Saturday,Breakfast,Coconut Chutney,0.04691696030404295,0.0493
+Saturday,Breakfast,Idli,0.1795294366051851,0.1885
+Saturday,Breakfast,Sambar,0.11505348370944812,0.1208
+Saturday,Dinner,Beans Poriyal,0.09373871994361957,0.0984
+Saturday,Dinner,Chapati,0.15702861026294565,0.1649
+Saturday,Dinner,Paneer Butter Masala,0.12521974897083388,0.1315
+Saturday,Lunch,Curd Rice,0.2697264289529348,0.2832
+Saturday,Lunch,Potato Fry,0.09878356275140789,0.1037
+Saturday,Lunch,Tomato Rice,0.28995670520472216,0.3045
+Saturday,Snacks,Sundal,0.07484783110265383,0.0786
+Saturday,Snacks,Tea & Biscuit,0.06678933661638832,0.0701
+Sunday,Breakfast,Pongal,0.19597624344318523,0.2058
+Sunday,Breakfast,Sambar,0.11752388683309671,0.1234
+Sunday,Breakfast,Vada,0.07616971357478672,0.08
+Sunday,Dinner,Coconut Chutney,0.04641848808895911,0.0487
+Sunday,Dinner,Dosa,0.14579311060650765,0.1531
+Sunday,Dinner,Sambar,0.1207726682272687,0.1268
+Sunday,Lunch,Chicken Biryani,0.3801367254576586,0.3991
+Sunday,Lunch,Egg Curry,0.11622471026344666,0.122
+Sunday,Lunch,Payasam,0.0955528930814647,0.1003
+Sunday,Snacks,Tea & Biscuit,0.06805430475344187,0.0715
+Thursday,Breakfast,Poori Masala,0.21615631641711422,0.227
+Thursday,Dinner,Gobi Manchurian,0.11424864838203619,0.12
+Thursday,Dinner,Veg Fried Rice,0.2906269861107994,0.3052
+Thursday,Lunch,Appalam,0.019359836784579514,0.0203
+Thursday,Lunch,Bitter Gourd Fry,0.07069329082016143,0.0742
+Thursday,Lunch,Curd Rice,0.26917897063914675,0.2826
+Thursday,Lunch,Sambar Rice,0.2945066188421508,0.3092
+Thursday,Snacks,Tea & Biscuit,0.06948245715641488,0.073
+Thursday,Snacks,Vada,0.07534510413831359,0.0791
+Tuesday,Breakfast,Pongal,0.18875912121789515,0.1982
+Tuesday,Breakfast,Sambar,0.11324091641991518,0.1189
+Tuesday,Breakfast,Vada,0.0808702657298411,0.0849
+Tuesday,Dinner,Coconut Chutney,0.04744910357552564,0.0498
+Tuesday,Dinner,Dosa,0.1447369897907857,0.152
+Tuesday,Dinner,Sambar,0.11657646196572095,0.1224
+Tuesday,Lunch,Lemon Rice,0.264371801682246,0.2776
+Tuesday,Lunch,Potato Fry,0.09862550910557738,0.1036
+Tuesday,Lunch,Rasam,0.11344176589774639,0.1191
+Tuesday,Snacks,Banana Bajji,0.0971922769326397,0.1021
+Tuesday,Snacks,Tea & Biscuit,0.06957997946049345,0.0731
+Wednesday,Breakfast,Coconut Chutney,0.04713465431859632,0.0495
+Wednesday,Breakfast,Upma,0.17511268594306817,0.1839
+Wednesday,Dinner,Chapati,0.14785383055087092,0.1552
+Wednesday,Dinner,Kootu,0.09091142958713425,0.0955
+Wednesday,Dinner,Veg Salna,0.1230478467851759,0.1292
+Wednesday,Lunch,Beetroot Poriyal,0.09569143397732946,0.1005
+Wednesday,Lunch,Egg Curry,0.11167359376043305,0.1173
+Wednesday,Lunch,Rice,0.2929937776353016,0.3076
+Wednesday,Lunch,Sambar,0.1185984796563757,0.1245
+Wednesday,Snacks,Sundal,0.07425452687491335,0.078
+Wednesday,Snacks,Tea & Biscuit,0.06859643169499961,0.072
