@@ -221,40 +221,44 @@ for buffer in [1.05, 1.10, 1.15]:
     os.makedirs("charts", exist_ok=True)
 
     #---chart1: day wise waste (kg)
-    day_summary["avg_kg_per_day"].plot(kind="bar", color="tomato")
+    day_summary["avg_kg_per_day"].plot(kind="bar", color=["steelblue"]*5 + ["tomato"]*2)
     plt.title("Average Waste Per Day (kg)")
     plt.ylabel("kg")
     plt.tight_layout()
     plt.savefig("charts/1_day_kg.png")
     plt.show()
+    plt.close()
 
 
     #---chart2: day wise waste (%)
-    day_summary["avg_waste_pct"].plot(kind="bar", color="steelblue")
+    day_summary["avg_waste_pct"].plot(kind="bar", color=["green", "green", "orange", "green", "orange", "red", "red"])
     plt.title("Average Waste % by Day")
     plt.ylabel("Waste %")
     plt.tight_layout()
     plt.savefig("charts/2_day_percent.png")
     plt.show()
+    plt.close()
 
 
     #---chart3: meal wise waste (kg)
-    meal_summary["total_wasted_kg"].plot(kind="bar", color="orange")
+    meal_summary["total_wasted_kg"].plot(kind="bar", color=["gold", "orange", "mediumpurple", "seagreen"])
     plt.title("Total Waste by Meal (kg)")
     plt.ylabel("kg")
     plt.tight_layout()
     plt.savefig("charts/3_meal_kg.png")
     plt.show()
+    plt.close()
 
     #---chart4: top 10 wasted items
     top10 = item_summary["total_wasted_kg"].sort_values(ascending=False).head(10)
-    top10.plot(kind="barh", color="crimson")
+    top10.plot(kind="barh", color=["red"]*3 + ["orange"]*7)
     plt.title("Top 10 Wasted Items (kg)")
     plt.xlabel("kg")
     plt.gca().invert_yaxis()
     plt.tight_layout()
     plt.savefig("charts/4_top10_items.png")
     plt.show()
+    plt.close()
 
 
     #---chart5: weekday vs weekend
@@ -264,17 +268,19 @@ for buffer in [1.05, 1.10, 1.15]:
     plt.tight_layout()
     plt.savefig("charts/5_weekday_weekend.png")
     plt.show()
+    plt.close()
 
 
     #---chart6: day vs meal waste %
     pivot = df.pivot_table(index="day_of_week", columns="meal", values="waste_percentage", aggfunc="mean")
     pivot = pivot.reindex(day_order)[meal_order]
-    pivot.plot(kind="bar")
+    pivot.plot(kind="bar", color=["gold", "orange", "mediumpurple", "seagreen"])
     plt.title("Waste % by Day and Meal")
     plt.ylabel("Waste %")
     plt.tight_layout()
     plt.savefig("charts/6_day_meal.png")
     plt.show()
+    plt.close()
 
 
     print("6 charts saved in charts folder")
